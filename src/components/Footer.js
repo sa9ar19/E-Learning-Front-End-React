@@ -33,17 +33,17 @@ export const Footer = () => {
 
               <div className="flex flex-col items-start mt-5 space-y-2">
                 <Link
-                  To="#"
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                   Home
                 </Link>
                 <Link
-                  To="#"
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                   Who We Are
                 </Link>
                 <Link
-                  To="#"
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                   Our Philosophy
                 </Link>
@@ -57,17 +57,17 @@ export const Footer = () => {
 
               <div className="flex flex-col items-start mt-5 space-y-2">
                 <Link
-                  To="#"
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                   Programming
                 </Link>
                 <Link
-                  To="#"
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                   Data Structure & Algorithms
                 </Link>
                 <Link
-                  To="#"
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                   Accounting
                 </Link>
@@ -78,7 +78,7 @@ export const Footer = () => {
           <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700"></hr>
 
           <div className="flex items-center justify-between">
-            <Link To="#">
+            <Link to="#">
               <img
                 className="w-auto h-24"
                 src={logo}
@@ -87,7 +87,7 @@ export const Footer = () => {
 
             <div className="flex -mx-2">
               <Link
-                To="#"
+                to="#"
                 className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                 aria-label="Reddit">
                 <svg
@@ -100,7 +100,7 @@ export const Footer = () => {
               </Link>
 
               <Link
-                To="#"
+                to="#"
                 className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                 aria-label="Facebook">
                 <svg
@@ -113,7 +113,7 @@ export const Footer = () => {
               </Link>
 
               <Link
-                To="#"
+                to="#"
                 className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                 aria-label="Github">
                 <svg

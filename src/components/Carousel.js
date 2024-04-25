@@ -7,7 +7,7 @@ import img4  from "../Assets/Carousel-4.jpg"
 
 export function CarouselComponent() {
   return (
-    <div className="h-full sm:h-64 xl:h-96 2xl:h-96">
+    <div className="mt-4 h-96 sm:h-96 xl:h-half 2xl:h-96">
       <Carousel slideInterval={1000} pause>
         <img src={img1} alt="..." />
         <img src={img2} alt="..." />

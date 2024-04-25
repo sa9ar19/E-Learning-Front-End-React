@@ -1,80 +1,59 @@
 import React from "react";
-import courseImg from "../Assets/Course-1.png"
+import courseImg from "../Assets/Course-1.png";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
-export const Card = ({course}) => {
+export const Card = ({ course }) => {
+
+
+  const handleCartAdd = () => {
+
+    Cookies.set("cartItem", JSON.stringify(course));
+    console.log("Course added to cart:", course);
+  }
   return (
-    <div>
-      <div class="max-w-2xl mx-auto">
-        <div class="bg-white shadow-lg rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-          <Link To="#">
-            <div class="">
-            <img
-              class="rounded-t-lg p-8 h-40 w-auto"
-              src={course.img}
-              alt="product image"></img>
+    <div className="relative">
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-white shadow-lg rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
+          <Link to={`/courseInfo/${course.name}`} state={course}>
+            <div className="relative">
+              <img
+                className="rounded-t-lg p-8 h-40 w-auto"
+                src={course.img}
+                alt="product image"></img>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100">
+                <p className="text-white font-semibold text-lg">View more</p>
+              </div>
             </div>
-           
-          </Link> 
-          <div class="px-5 pb-5">
-            <Link To="#">
-              <h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+          </Link>
+          <div className="px-5 pb-5">
+            
+              <h3 className="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
                 {course.name}
               </h3>
-              <h2 class="text-gray-900 font-semibold text-l tracking-tight dark:text-white">
+              <h2 className="text-gray-900 font-semibold text-l tracking-tight dark:text-white">
                 {course.instructorName}
               </h2>
-            </Link>
-            <div class="flex items-center mt-2.5 mb-5">
-              <svg
-                class="w-5 h-5 text-yellow-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg
-                class="w-5 h-5 text-yellow-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg
-                class="w-5 h-5 text-yellow-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg
-                class="w-5 h-5 text-yellow-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg
-                class="w-5 h-5 text-yellow-300"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                {course.rating}
-              </span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-3xl font-bold text-gray-900 dark:text-white">
+            <div className="flex items-center mt-2.5 mb-5"></div>
+            <div className="flex items-center justify-between">
+              <span className="text-3xl font-bold text-gray-900 dark:text-white">
                 {course.pricing}
               </span>
             </div>
-            
+            <div className="mt-3 flex items-center justify-between">
+              <button
+                onClick={handleCartAdd}
+                className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
+                Add to cart
+              </button>
+              <Link to="/cart">
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
+                  Buy Now
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
